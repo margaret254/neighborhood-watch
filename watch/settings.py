@@ -29,8 +29,12 @@ INSTALLED_APPS = [
     'neighborhood',
     'bootstrap4',
     'django_registration',
+    'pyuploadcare.dj',
 ]
-
+UPLOADCARE = [
+    'pub_key': '3d2b25cba852f14a9783'
+    'secret_key': '911e8b531ac06da94dcd'
+]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

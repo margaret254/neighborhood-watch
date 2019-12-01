@@ -1,23 +1,18 @@
-{% extends registration/base.html%}
+{% extends 'registration/base.html'%}
 {% load static%}
 {% load bootstrap4%}
-{% bock content%}
+{% block content%}
 <div class="container">
         <div class="row">
-          <div class="col-md-6 home">
-            <div class="mobile"></div>
-            <img src="/static/images/ig.png" alt="Phone images">
-          </div>
-          <div class="col-md-6 top-margin">
+         
+          <div class="col-md-6 mx-auto reg" style="margin-top:5rem">
               {% if form.errors %}
               <p>Some information may be incorrect</p>
           {% endif %}
-          <div class="signup-fields">
+          <div class="signup-fields ">
               <div class="section">
-                      <div class="mylogo">
-                              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2000px-Instagram_logo.svg.png"  class="mylogo">
-                      </div>
-                      <span class="text-center">Sign up to see photos and videos from your friends.</span>
+                      
+                     
                   <div class="form-section" id="register">
                       <form method="post" action="/accounts/register/">
                           {% csrf_token %}
@@ -35,4 +30,4 @@
           </div>
         </div>
       </div>
-{% endbock %}
+{% endblock %}
