@@ -1,5 +1,68 @@
+{%extends 'main/basehood.html'%}
+{% load staticfiles%}
+{% load bootstrap4 %}
+
+{% block content %}
+{{block.super}}
 <section>
-    <div class="container">
+    <div class="container" style="">
+        <div class="row">
+            <div class="col-md-8">
+                <h3>Available Businesses</h3>
+                {% for b in bus %}
+               <div class="card">
+                   <div class="card-body">
+                        <h1>{{b.bName}}</h1>
+                   </div>
+                    
+               </div>
+                
+                
+                    
+                
+                {% endfor%}
+            </div>
+            <div class="col-md-4">
+                <h3 class="text-center">Important contacts:</h3>
+                <div class="contacts">
+                    <h3>Health Contact: <span class="ml-3">{{hoods.health_contact}}</span></h3>
+                    <h3>Police Contact:<span class="ml-3">{{hoods.police_contact}}</span></h3>
+                    <h3>Occupants:<span class="ml-3">{{hoods.occupants}}</span></h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+          
+            
+            <div class="col-md-4">
+                {% if posts%}
+                {%for post in posts%}
+                    <div class="card" style="">
+                            
+                            
+                                <div class="card-header">
+                                       
+                                <div class="cardb-body">
+                                        <img src="{{post.image.url}}" class="card-img-top" alt="{{post.name}}" class="img-thumnail" style="">
+                                </div>
+                                <div class="card-text">
+                                    <p>{{post.content}}</p>
+                                </div>
+                                <div class="card-footer">
+                                    {{post.date_posted|timesince}}<span class="ml-2">ago</span>
+                                </div>
+                            
+                        </div>
+            </div>
+            {%endfor%}
+            {%else%}
+            <h3 class="text-center">No posts yet</h3>
+            {%endif%}
+        </div>
         
     </div>
 </section>
+        
+           
+     
+{% endblock %}
