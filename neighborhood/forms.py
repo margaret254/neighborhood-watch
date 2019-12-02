@@ -6,8 +6,8 @@ class ProfileForm(forms.ModelForm):
         model = Profile
         exclude=['user']
 
-class ProstForm(forms.ModelForm):
+class PostForm(forms.ModelForm):
     class Meta:
-        model = Profile
-        exclude=['user']
+        model = Post
+        fields =['title', 'content', 'image']
 
