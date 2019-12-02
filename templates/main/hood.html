@@ -3,8 +3,7 @@
 {% load bootstrap4 %}
 
 {% block content %}
-{{block.super}}
-<section>
+
     <div class="container" style="">
         <div class="row">
             <div class="col-md-8">
@@ -14,12 +13,7 @@
                    <div class="card-body">
                         <h1>{{b.bName}}</h1>
                    </div>
-                    
-               </div>
-                
-                
-                    
-                
+               </div>      
                 {% endfor%}
             </div>
             <div class="col-md-4">
@@ -28,6 +22,8 @@
                     <h3>Health Contact: <span class="ml-3">{{hoods.health_contact}}</span></h3>
                     <h3>Police Contact:<span class="ml-3">{{hoods.police_contact}}</span></h3>
                     <h3>Occupants:<span class="ml-3">{{hoods.occupants}}</span></h3>
+                    
+                    <a href="{% url 'new_post' hoods.id%}" class="btn btn-outline-primary">Add Post</a>
                 </div>
             </div>
         </div>
@@ -61,8 +57,7 @@
         </div>
         
     </div>
-</section>
-        
+
            
      
 {% endblock %}
