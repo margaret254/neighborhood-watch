@@ -5,6 +5,9 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('hood/<int:id>/', views.hood, name='hood'),
+    path('profile/', views.profile, name='profile'),
+    path('update/', views.update_profile, name='update'),
     
 ]
 if settings.DEBUG:
