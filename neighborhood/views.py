@@ -7,6 +7,7 @@ from .forms import *
 def index(request):
     hoods = Neighborhood.objects.all()
     return render(request, 'main/index.html', {'hoods':hoods})
+    
 @login_required(login_url='/accounts/login/?next=/')
 def hood(request,id):
     hoods = Neighborhood.objects.get(id=id)
