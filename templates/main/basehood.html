@@ -14,13 +14,13 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
     {% bootstrap_css %}
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/hoodnav.css' %}">
 {% endblock %}
 </head>
 <body>
-        {% include "hoodnav.html" %}
+        {% include "main/hoodnav.html" %}
     {% block content%}
-    3
+    
     {% endblock %}
 
     {% block scripts %}
