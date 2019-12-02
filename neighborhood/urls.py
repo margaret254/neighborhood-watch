@@ -8,6 +8,7 @@ urlpatterns = [
     path('hood/<int:id>/', views.hood, name='hood'),
     path('profile/', views.profile, name='profile'),
     path('update/', views.update_profile, name='update'),
+    path('post/<int:id>/', views.add_post, name='new_post')
     
 ]
 if settings.DEBUG:
