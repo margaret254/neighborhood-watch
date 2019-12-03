@@ -79,7 +79,7 @@ class Business(models.Model):
         self.save()
 
     def delete_business(self):
-        self.save()
+        self.delete()
     
     @classmethod
     def find_business(cls,business_id):
@@ -120,9 +120,9 @@ class Post(models.Model):
         return cls.objects.get(id=id)
 
     @classmethod   
-    def update_post(cls,id,title):
-        cls.objects.filter(pk = id).update(title=title)
-        new_name_object = cls.objects.filte(title__icontains = title)
+    def update_post(cls,id,content):
+        cls.objects.filter(pk = id).update(title=content)
+        new_name_object = cls.objects.get(pk=id)
         new_name = new_name_object.title
         return new_name
 
