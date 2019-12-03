@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'neighborhood',
     'bootstrap4',
-    'django_registration',
+    
     'pyuploadcare.dj',
 ]
 # UPLOADCARE = {
