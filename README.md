@@ -7,7 +7,7 @@
 This is an app that allow users to be updated on what is happenning on their neighborhoods
 
 ## Project live site
-  This is the live .[ Click for the demo](https://neighborwatch.herokuapp.com/)
+  This is the live .[ Click for the link](https://neighborwatch.herokuapp.com/)
  ![Image](/static/img/short.png)
  
  ![alt text](static/img/awwards.png)
