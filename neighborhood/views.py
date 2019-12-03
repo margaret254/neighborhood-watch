@@ -14,14 +14,14 @@ def hood(request,id):
     bus = hoods.business_set.all
     posts  = hoods.post_set.all
     return render(request, 'main/hood.html', {'hoods':hoods, 'bus':bus, 'posts':posts})
-@login_required(login_url='/accounts/login/?next=/')
+
 def profile(request):
       current_user = request.user
       profile = Profile.objects.filter(user=current_user).first()
       posts = request.user.post_set.all()
        
       return render(request, 'main/profile.html', {"posts": posts, "profile": profile, 'current_user':current_user})
-@login_required(login_url='/accounts/login/?next=/')
+
 def update_profile(request):
     user_profile = Profile.objects.get(user=request.user)
     
@@ -33,7 +33,7 @@ def update_profile(request):
     else:
         form = ProfileForm(instance=request.user.profile)
         return render(request,'main/update_profile.html', {'form':form})
-@login_required(login_url='/accounts/login/?next=/')
+
 def add_post(request,id):
         current_user = request.user
         hoods = Neighborhood.objects.get(id=id)
